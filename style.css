@@ -34,6 +34,8 @@ body {
     background-position: top center;               /*Posiciona ele de modo centralizado página*/
     background-size: cover;                        /*Vai cobrir os espaços livres para que o backgr preencha tudo*/
 
+
+    height: 100vh;
     /* Caso queira fazer tudo em uma linha só (shorthand)*/
 
  /* background: color image repeat position/size
@@ -179,4 +181,17 @@ footer{
     display: flex;
     justify-content: center;
     padding: 24px 0;
+}
+
+
+/* MEDIA QUERIES*/
+
+@media (min-width: 768px) {
+    :root{
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
 }
