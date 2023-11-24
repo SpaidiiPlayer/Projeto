@@ -93,11 +93,15 @@ body *{
     top: 50%;
     transform: translateY(-50%);
 
+    animation: deslizar-back 0.2s;
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: deslizar 0.2s forwards;
+}
+
+#switch button:hover{
+    outline: 5px solid var(--social--hover);
 }
 
 #switch span {
@@ -193,5 +197,26 @@ footer{
 
     .light{
         --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+
+/* animations */
+
+@keyframes deslizar {
+    from {
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes deslizar-back {
+    from {
+        left: 50%;
+    }
+    to{
+        left: 0;
     }
 }
